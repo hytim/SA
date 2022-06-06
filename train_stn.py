@@ -63,7 +63,7 @@ class Trainer(object):
                 loss1 = self.loss(align_img, torch.flip(align_img, dims=[-1]))
                 loss2 = self.loss(data, inv_img)
                 loss4 = torch.abs(nn.ReLU(True)(torch.abs(offset_matrix) - 0.2 * torch.ones_like(offset_matrix))).mean()
-                loss = 1000 * loss1 + loss2 + 1e5 * loss4
+                loss = 10 * loss1 + loss2 + 1e3 * loss4
 
                 loss.backward()
                 self.optimizer.step()
