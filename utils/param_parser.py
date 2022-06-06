@@ -8,7 +8,7 @@ def args_parser():
                         default=128, required=False, help='seed for producing random digits')
 
     parser.add_argument('--max_epoch', dest='max_epoch', type=int,
-                        default=200, required=False, help='max epoch')
+                        default=400, required=False, help='max epoch')
 
     parser.add_argument('--data_root', dest='data_root', type=str,
                         default='../ventricle/data/data', required=False, help='data root')
@@ -64,7 +64,7 @@ def args_parser():
                         type=int, default=15, required=False, help='patience for early stop')
 
     parser.add_argument('--batch_size', dest='batch_size',
-                        type=int, default=8, required=False, help='Batch Size')
+                        type=int, default=24, required=False, help='Batch Size')
 
     parser.add_argument('--lr', dest='lr', type=float,
                         default=1e-4, required=False, help='learning rate')
